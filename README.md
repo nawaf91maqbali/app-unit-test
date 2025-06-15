@@ -8,12 +8,16 @@ This repository demonstrates a well-structured unit testing suite for a .NET app
 
 ```
 AppUnitTest/
+├── Controllers/
+│   └── UserController.cs
 ├── Models/
 │   └── User.cs
 ├── Services/
 │   └── UserService.cs
 ├── DbContextService.cs
 ├── Test/
+|   ├── ApiTest/
+│   │   └── UserApiUnitTest.cs      # Business logic test (via api endpoints)
 │   ├── DbTest/
 │   │   └── UserUnitTest.cs         # Direct DB tests (CRUD)
 │   └── ServiceTest/
@@ -47,6 +51,14 @@ dotnet test
 ---
 
 ## ✅ What’s Covered?
+
+### 🔹 `UserServiceUnitTest.cs`
+
+- `CreateUser` with valid and invalid input
+- `GetUsers` with and without seed data
+- `GetUserById` success and not found cases
+- `UpdateUser` success, null input, and not found
+- `DeleteUser` success and not found
 
 ### 🔹 `UserServiceUnitTest.cs`
 
@@ -123,4 +135,4 @@ Build succeeded in 12.7s
 ## 🙋‍♂️ Author
 
 **Nawaf AL-Maqbali**  
-📧 [LinkedIn](https://github.com/nawaf91maqbali)
+📧 [LinkedIn](https://www.linkedin.com/in/nawaf-al-maqbali-6bb4a6227)
